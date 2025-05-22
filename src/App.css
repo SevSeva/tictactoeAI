@@ -1,0 +1,93 @@
+/* Global body styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding around the game */
+  background-color: #f7f7f7; /* Light gray background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top, then center App content */
+  min-height: 100vh; /* Ensure background covers full height */
+  color: #333; /* Default text color */
+}
+
+/* Main application container */
+.App {
+  text-align: center;
+  background-color: #fff; /* White background for the game area */
+  padding: 25px; /* Increased padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px; /* Increased margin */
+  font-size: 2.2em; /* Slightly larger title */
+}
+
+/* Board and Square styling */
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #fff; /* Keep square background white */
+  border: 1px solid #ddd; /* Lighter border for squares */
+  float: left;
+  font-size: 36px; /* Slightly larger font for X/O */
+  font-weight: bold;
+  line-height: 55px; /* Adjust line height for new font size */
+  height: 55px;      /* Adjust height for new font size */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 55px;       /* Adjust width for new font size */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  background-color: #f0f0f0; /* Light hover for empty squares */
+}
+
+/* Player-specific colors */
+.square.player-x, .player-x { /* Ensure .player-x in GameInfo also gets this color */
+  color: #007bff; /* Blue for X */
+}
+
+.square.player-o, .player-o { /* Ensure .player-o in GameInfo also gets this color */
+  color: #dc3545; /* Red for O */
+}
+
+/* Game information styling */
+.game-info {
+  margin-top: 25px;   /* Increased margin */
+  margin-bottom: 20px; /* Increased margin */
+  font-size: 1.1em;   /* Slightly larger font */
+  color: #555; /* Slightly softer color for game info text */
+}
+
+/* Reset button styling */
+.reset-button {
+  margin-top: 10px; /* Adjusted from game-info margin-bottom */
+  padding: 12px 20px; /* More padding */
+  font-size: 1em;    /* Standard font size */
+  cursor: pointer;
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #6c757d; /* Grayish-blue base color */
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  background-color: #5a6268; /* Darker hover */
+}
